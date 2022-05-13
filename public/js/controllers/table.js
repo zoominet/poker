@@ -51,6 +51,7 @@ function( $scope, $rootScope, $http, $routeParams, $timeout, sounds ) {
 
 	$scope.callAmount = function() {
 		if( $scope.mySeat === null || typeof $scope.table.seats[$scope.mySeat] === 'undefined' || $scope.table.seats[$scope.mySeat] == null ) return 0;
+		// if($scope.table.biggestBet > 8) $scope.table.biggestBet = 8;
 		var callAmount = +$scope.table.biggestBet - $scope.table.seats[$scope.mySeat].bet;
 		return callAmount > $scope.table.seats[$scope.mySeat].chipsInPlay ? $scope.table.seats[$scope.mySeat].chipsInPlay : callAmount;
 	}
