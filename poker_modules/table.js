@@ -213,6 +213,7 @@ Table.prototype.initializeRound = function( changeDealer ) {
 		this.headsUp = this.playersSittingInCount === 2;
 		this.playersInHandCount = 0;
 		this.biggestBet = 0;
+		this.public.biggestBet = 0;
 
 		for( var i=0 ; i<this.public.seatsCount ; i++ ) {
 			// If a player is sitting on the current seat
