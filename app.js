@@ -238,7 +238,7 @@ io.sockets.on('connection', function( socket ) {
 	 * @param function callback
 	 */
 	socket.on('postBlind', function( postedBlind, callback ) {
-		if( players[socket.id].sittingOnTable !== false ) {
+		if( players[socket.id].sittingOnTable && players[socket.id].sittingOnTable !== false ) {
 			var tableId = players[socket.id].sittingOnTable;
 			var activeSeat = tables[tableId].public.activeSeat;
 
